@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headers}}
+</head>
+<body>
+    <!-- bootstrap ka grid system use karenge -->
+    {{>navbar}}
+
+    <div class="container-fluid main_header" >
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                
+                <div class="main_content">
+                    <form action="/sendMessage" method="POST" onsubmit="return getInfo()" >
+                        <div class="temp_form1">
+                        <input type="text" placeholder="Mobile No (stay updated about slots present)" id="number" name="num" autocomplete="off">
+                        </div>
+                        <div class="temp_form">
+                        <input type="text" placeholder="Enter your pin code" name="city" id="cityname" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn" >
+                        </div>
+                    </form>
+                </div>
+
+                <div class="vaccineinfo">
+                    <div class="top_layer">
+                        <p id="todays_date">16 May</p>
+                    </div>
+                    
+                <div class="main_layer">
+                    <p id="city_name">Details if valid will be sent to your number</p>
+                </div>
+                <p class="datahide">Thank you</p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="js/main.js"></script>
+</body>
+</html>
